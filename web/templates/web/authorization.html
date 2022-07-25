@@ -1,0 +1,42 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+{% block main %}
+<main>
+    <form method="post" class="authorization">
+        {% csrf_token %}
+        <div class="head_authorization">
+            <p>Авторизация</p>
+
+        </div>
+        <div class="body_authorization">
+            <p>{{ form.non_field_errors }}</p>
+            <p>{{ form.username.errors }}</p>
+            <p>{{ form.password.errors }}</p>
+            <div class="input_authorization">
+                <div class="input_authorization_email">
+                    {{ form.username }}
+                </div>
+                <div class="input_authorization_pas">
+                    {{ form.password }}
+                </div>
+            </div>
+            <div class="login-submit">
+                <button type="submit" class="login-button" onClick="ValidPas();">Войти</button>
+            </div>
+        </div>
+        <div class="fotter_authorization">
+            <div class="forgot_pas">
+                <a href="">Забыли пароль?</a>
+            </div>
+            <div class="registration_page">
+                <a href="registration.html">Регистрация</a>
+            </div>
+
+        </div>
+    </form>
+
+
+</main>
+{% endblock %}

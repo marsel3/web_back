@@ -1,0 +1,71 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block menu %}
+    <style>
+    #tov_button {
+        color: white;
+        background-color:#376e6f;
+        border-radius:15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+    }
+    </style>
+{% endblock %}
+
+
+{% block main %}
+    <main>
+        <div class="box_content">
+            {% for i in page_obj %}
+                <div class="category_card">
+                    <a href="{{ i.get_absolute_url }}" style="text-decoration: none;">
+                        <img class='category_image' src='{{ i.tovar_photo }}'>
+                        <div class='card_title'>{{ i.tovar_title }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if page_obj.has_other_pages %}
+            <div class="pages">
+                <ul class="list_page">
+
+                {% if page_obj.has_previous  %}
+                    <a href="?page={{ page_obj.paginator.previous_page_number  }}">
+                        <li class="page_button">в начало</li>
+                    </a>
+                {% endif %}
+
+                    {% for p in page_obj.paginator.page_range %}
+
+                                {% if page_obj.number == p %}
+                            <li class="page_button_select">
+                                {{ p }}
+                            </li>
+
+                    {% elif p > page_obj.number|add:'-3' and p < page_obj.number|add:3 %}
+                            <a href="?page={{ p }}">
+                                <li  class="page_button">
+                                {{ p }}
+                                </li>
+                            </a>
+                                {% endif %}
+
+                    {% endfor %}
+
+                {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.paginator.num_pages }}">
+                            <li class="page_button">в конец</li>
+                        </a>
+                {% endif %}
+
+                </ul>
+            </div>
+        {% endif %}
+
+    </main>
+{% endblock %}
+
+
+
+

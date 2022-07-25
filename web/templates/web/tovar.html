@@ -1,0 +1,21 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+{% block main %}
+    <main>
+        <div class="box_content">
+            <div class="category_card">
+                <a href="" style="text-decoration: none;">
+                    <img class='category_image' src='{{ tovar.tovar_photo }}'>
+                    <div class='card_title'>{{ tovar.tovar_title }}</div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}
+
+
+
+

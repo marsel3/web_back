@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <html lang="ru">
+        <head>
+            <title>do Buli Mon chef</title>
+            {% load static %}
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+            <script src="{% static 'js/script.js' %}"></script>
+
+        </head>
+        <body>
+            <header>
+                <div class="header_toper">
+                    {% if request.user.is_authenticated %}
+                        <div class="toper_out">
+                            <div class="toper_button_out">
+                                <a class="go_out" href="#">👤 {{ request.user.first_name }} {{ request.user.last_name }}</a>
+                                <ul class="profil_list_ul">
+                                    <li><a class="profil_list_ul_li" href="">профиль</a></li>
+                                    <li><a class="profil_list_ul_li" href="{% url 'logout' %}">выйти</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="toper">
+                            <a class="go_to_user" href="{% url 'authorization' %}">Войти</a> или
+                            <a class="go_to_user" href="{% url 'registration' %}">Зарегистрироваться</a>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="botter">
+                    <div id="botter">
+                        <div class="botter_logo">
+                            <a href="{% url 'home' %}" class="">
+                                <img src="{% static 'img/log.png' %}" alt="" height="150px">
+                            </a>
+                        </div>
+
+                        <div class="botter_text">
+                            <div>Рыболовный
+                                <br>магазин
+                            </div>
+                        </div>
+
+                        <div class="botter_adres">
+                            <div >г. Казань, ул. Баки Урманче
+                                <br>Пн-вс: 08.00-20.00
+                            </div>
+                        </div>
+
+                        <div class="botter_search">
+                            <div class="search_box">
+                                <input type="text" name="" class="search-txt" placeholder="Введите для поиска"/>
+                                <a class="search-btn" href="#"></a>
+                                <style type="text/css">
+                                    .search_box:hover > .search-btn {
+                                        background-image: url("{% static 'img/loop4.png' %}");
+                                    }
+                                    .search-btn {
+                                        background-image: url("{% static 'img/loop2.png' %}");
+                                    }
+                                </style>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="menu" align="center">
+                    <ul class="menu_ul">
+                        <li class="menu_ul_li"><a href="{% url 'home' %}" id="main_button">Главная</a></li>
+                        {% load web_tags %}
+                        {% get_categories as categories %}
+                        <li class="menu_ul_li" id="tov_button" ><a href="{% url 'catalog' %}">Товары</a>
+                            <ul class="tov_ul">
+                                {% for i in categories %}
+                                    <li class="tov_ul_li"><a href="{{ i.get_absolute_url }}">{{ i.category_title }} </a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
+                        <li class="menu_ul_li"><a href="{% url 'about' %}" id="about_button">Почему мы?</a></li>
+                        <li class="menu_ul_li"><a href="{% url 'contacts' %}" id="contacts_button">Контакты</a></li>
+                    </ul>
+                </div>
+                {% block menu %} {% endblock %}
+
+            </header>
+
+            {% block main %} {% endblock %}
+
+            <footer>
+                © Акбулатов Марсель
+                <br>По вопросам рекламы: akbulatov03@mail.ru
+            </footer>
+        </body>
+    </html>

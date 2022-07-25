@@ -1,0 +1,65 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block menu %}
+    <style>
+       #main_button {
+        color: white;
+        background-color:#376e6f;
+        border-radius:15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+    }
+    </style>
+{% endblock %}
+
+
+{% block main %}
+<main>
+    <div class="slideshow">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <div id="slides">
+            <div id="overflow">
+                <div class="slide_image">
+                    <article><img src="{% static 'img/slide7.jpg' %}"></article>
+                    <article><img src="{% static 'img/slide5.jpg' %}"></article>
+                    <article><img src="{% static 'img/slide6.jpg' %}"></article>
+                    <article><img src="{% static 'img/slide2.jpg' %}"></article>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+        </div>
+    </div>
+
+    <div class="box_cat">
+        <div class="box_heading">Категории</div>
+
+
+        <div class="box_content">
+
+
+            {% for i in categories %}
+                <div class="category_card">
+                <a href="{{ i.get_absolute_url }}" style="text-decoration: none;">
+                    <img class='category_image' src='{{ i.category_photo }}'>
+                    <div class='card_title'>{{ i.category_title }}</div>
+                </a>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+    <div class="adv">Здесь могла быть ваша реклама.</div>
+
+
+</main>
+{% endblock %}

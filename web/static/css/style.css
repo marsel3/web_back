@@ -1,0 +1,845 @@
+/*__________________________________НАЧАЛО ОПИСАНИЯ ОСНОВНЫХ БЛОКОВ_______________*/
+a {
+  text-decoration:none;
+}
+
+header {
+   /* border: 5px dashed black;*/
+        }
+
+html { /*доавляет полосу прокуртки(чтоб не дёргало)*/
+	overflow-y: scroll;
+
+}
+
+main{
+    background: #FFCB9A;
+}
+
+footer{
+    text-align:center;
+    background: #BDBDBD; /* Цвет фона */
+    padding: 10px;
+    }
+
+.botter {
+    background: #116466;
+    /*border: 2px dashed grey;*/
+    font-size: 30px;
+    color: white;
+    text-align: left;
+
+    padding: 10px 20px;
+    margin: 0 auto;
+    }
+
+.cat-box, .adv {
+    }
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ ШАПКА ШАПКИ_______________*/
+.header_toper {
+    background: #2c3531;
+    font-size: 20px;
+    color: grey;
+    text-align:center;
+
+}
+
+.toper {
+    text-align: center;
+    max-width: 1260px;
+    margin: 0 auto;
+    }
+
+.toper {
+    color: grey;
+}
+
+.go_to_user {
+    text-decoration: none;
+    color: white;
+}
+
+.go_to_user:hover {
+    text-decoration: none;
+    color: #42AAFF;
+}
+
+.botter_text, .botter_adres{
+    align-items : center;
+}
+
+.botter_adres {
+    font-size: 20px;
+}
+
+.botter_text {
+    font-size: 40px;
+}
+
+#botter {
+    max-width: 1260px;
+    margin: 0 auto;
+
+}
+
+.botter_search {
+    align-items : center;
+}
+
+.botter div {
+    display: flex;
+    padding-right: 25px;
+}
+
+.toper_out {
+    max-width: 1260px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.go_out {
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.go_out:hover {
+    text-decoration: none;
+    color: #42AAFF;
+}
+
+.toper_button_out {
+    position: relative;
+    display: inline-block;
+}
+
+.toper_button_out:hover .profil_list_ul {
+    transform: scaleY(1);
+}
+
+
+.profil_list_ul{
+    transition: 0.5s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+
+    list-style-type: none;
+
+    position: absolute;
+    background-color: #f1f1f1;
+    margin: 0;
+}
+
+.profil_list_ul_li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.profil_list_ul_li:hover {
+    text-decoration: none;
+    color: #42AAFF;
+}
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ ПОИСКА ПО САЙТ_______________*/
+
+.search_box {
+    align-items : center;
+    background: #FFE3C7;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    }
+
+.search_box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search_box:hover > .search-btn {
+    background-size: 36px 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.search-btn {
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+
+    color: black;
+    width: 0px;
+    font-size: 16px;
+
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ ШАПКИ_____________________*/
+.menu {
+    background: #D1E8E2;
+    padding: 1px 0px;
+}
+
+.menu_ul {
+    text-align: center;
+    max-width: 1260px;
+
+}
+
+.menu > ul > li > a{
+    margin-left: 15 15 0;
+    font-size: 40px;
+    padding: 20px;
+    color: black;
+}
+
+.menu > ul > li > a:hover {
+    color: white;
+    background: #72B7B7;
+    /*#376e6f #72B7B7*/
+    border-radius: 15px; /* Радиус скругления */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+}
+
+.menu > ul {
+    list-style:none;
+    marin: 0;
+
+}
+
+.menu > ul > li {
+    display: inline-block;
+}
+
+.tov_ul {
+    margin-top: 16px;
+    padding: 0 0 0 0px;
+
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+
+    position: absolute;
+
+
+    z-index: 100;
+    transition: 0.5s ease-in-out;
+
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    background: #f1f1f1;
+}
+
+#tov_button:hover .tov_ul {
+    transform: scaleY(1);
+}
+
+.tov_ul_li {
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    color: black;
+
+    text-align: left;
+}
+.tov_ul_li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.tov_ul_li a:hover {
+    color: #42AAFF;
+}
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ БОКСОВ КАТЕГОРИИ_______________*/
+.box_heading {
+    background: #FFCB9A;
+    margin: 80px auto 70px auto;
+    text-align: center;
+    font-size: 31px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.category_card {
+    background-color: #fff;
+    width: 200px;
+    height: 300px;
+
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 40px #434040;
+
+    margin: 10px 25px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+
+
+}
+.category_card:hover {
+    width: 190px;
+    height: 290px;
+    border: 5px dashed black;
+}
+
+.category_image {
+    border-radius: 11px;
+    width: 200px;
+    height: 250px;
+}
+
+.card_title {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+.box_content {
+    text-align: center;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ СЛАЙДЕРА_____________________*/
+.slideshow{ /*положение слайдера*/
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+
+    overflow: hidden;
+   /*    max-width: 960px;
+   max-height:200px;
+   */
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 25%; /* 100/(кол.слайдов) */
+	float: left;
+}
+
+.slide_image { /*устанавливает общий размер блока с изображениями*/
+    width: 400%; /* 100*(кол.свлайдов) */
+	line-height: 0;
+
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+
+}
+
+.slideshow input { /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#r1:checked ~  #slides .slide_image {
+	margin-left: 0;
+}
+
+#r2:checked ~ #slides .slide_image {
+	margin-left: -100%;
+}
+
+#r3:checked ~ #slides .slide_image {
+	margin-left: -200%;
+}
+
+#r4:checked ~ #slides .slide_image {
+	margin-left: -300%;
+}
+
+
+.navigation label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 28px;
+	height: 8px;
+	background: #bbb;
+}
+
+.navigation{ /*расположение блока с переключателями*/
+	margin: -5% 0 0;
+	text-align: center;
+}
+
+.navigation label:hover{ /*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	cursor: pointer;
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#r1:checked ~ .navigation label:nth-child(1),
+#r2:checked ~ .navigation label:nth-child(2),
+#r3:checked ~ .navigation label:nth-child(3),
+#r4:checked ~ .navigation label:nth-child(4){
+	background: #18a3dd;
+
+}
+
+.slide_image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ ПОЧЕМУ МЫ___________________*/
+.main_info_block {
+    text-align: left;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.info_header_main{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info_discont_img {
+    text-align: center;
+}
+
+.info_sponsor_title, .info_discount_title {
+    text-align:center;
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 40px;
+}
+.info_assort_title{
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.info_sponsor_img1, .info_sponsor_img2 {
+    text-align: center;
+    padding: 30px;
+}
+
+.info_sponsor img{
+    width: 300px;
+}
+.info_sponsor_text1 {
+    padding-top: 50px;
+}
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ ФОРМЫ CВЯЗИ_______________*/
+.page_contacts {
+    text-align: left;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.box_contact_info{
+    border: 1px solid #D9B08C;
+    overflow: auto;
+    padding: 5px;
+}
+
+.box_contact_info_left {
+    float: left;
+    margin-left:20px;
+}
+.box_contact_info_right {
+    float: right;
+    width: 49%;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.forma {
+    padding-bottom: 50px;
+}
+
+.content_mail {
+    font-size: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.2);
+}
+
+.content_mail * {
+    box-sizing: border-box;
+}
+
+
+.content_input {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #BFE2FF;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.content_input.w50{
+    width: calc(50% - 10px);
+    display: inline-block;
+}
+
+.content_input.w50:first-child{ /*для отступа от первого */
+    margin-right: 20px;
+}
+
+.input-at {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: #000;
+    height: 50px;
+    padding: 0 20px 0 20px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+
+textarea.input-at {
+    min-height: 170px;
+    padding: 18px 20px;
+    font-size: 16px;
+    line-height: 22px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.focus-input-at { /*синяя обводка на выбраных*/
+    position: absolute;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    border: 2px solid #337AB7;
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: scaleX(1.1) scaleY(1.3);
+}
+.input-at:focus + .focus-input-at {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.content_add_file {
+    padding-bottom: 30px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+}
+
+.form-at-btn {
+    display: block;
+    padding: 0 40px;
+    height: 50px;
+    background-color: #337AB7;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    transition: all 0.4s;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.form-at-btn:hover {
+    background-color: #333333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ АВТОРИЗАЦИИ_______________*/
+
+.authorization {
+    width: 455px;
+    margin: 0px auto;
+    padding: 20px;
+
+}
+
+
+.head_authorization {
+    background: #7CC2C5;
+    border-bottom: 1px solid #2d2f32;
+    padding: 1px 0;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+
+}
+
+.body_authorization {
+
+    background: #7CC2C5;
+    border-bottom: 1px solid #2d2f32;
+    border-top: 1px solid #2d2f32;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+}
+
+.fotter_authorization {
+    background: #7CC2C5;
+    border-bottom: 1px solid #2d2f32;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+    padding: 15px 0;
+}
+
+.input_authorization_email{
+        margin-top: 15px;
+}
+
+.input_authorization input{
+    background: #daf4fe;
+    border: none;
+    color: #25262a;
+    display: block;
+    margin: 0 20px;
+    outline: none;
+    padding: 15px 0;
+
+    padding-left: 10px;
+    width: 90%;
+
+    border-bottom: 1px solid BLACK;
+}
+
+#input_email{
+    border-radius: 10px 10px 0 0;
+}
+
+#input_password{
+    border-radius: 0 0 10px 10px;
+}
+
+.login-button {
+    background: #00aeef;
+    border-radius: 10px;
+    border: none;
+    color: #25262a;
+    display: block;
+    margin: 0 20px;
+    outline: none;
+    padding: 15px 0;
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.login-button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.forgot_pas{
+    margin-left: 15px;
+}
+
+.registration_page{
+    float:right;
+    margin-right: 25px;
+
+
+}
+
+.forgot_pas, .registration_page{
+    display: inline;
+}
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ РЕГИСТРАЦИИ___________________*/
+
+.registration {
+    width: 455px;
+    margin: 0px auto;
+    padding: 20px;
+
+}
+
+
+.head_registration {
+    background: /*#7CC2C5*/ #7CC2C5;
+    border-bottom: 1px solid #2d2f32;
+    padding: 1px 0;
+    text-align: center;
+    font-size: 35px;
+
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+
+}
+
+.body_registration {
+
+    background: #7CC2C5;
+    border-bottom: 1px solid #2d2f32;
+    border-top: 1px solid #2d2f32;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+}
+
+.fotter_registration {
+    background: #7CC2C5;
+    border-bottom: 1px solid #2d2f32;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+    padding: 15px 0;
+}
+
+.input_registration_pas{
+        margin-top: 15px;
+}
+
+.input_registration input{
+    background: #daf4fe;
+    border: none;
+    color: #25262a;
+    display: block;
+    margin: 0 20px;
+    outline: none;
+    padding: 15px 0;
+
+    padding-left: 10px;
+    width: 90%;
+
+    border-bottom: 1px solid BLACK;
+}
+.input_name_reg {
+    margin-top: 15px;
+}
+
+#input_name_reg{
+    border-radius: 10px 10px 0 0;
+}
+
+#input_password_reg_2{
+    border-radius: 0 0 10px 10px;
+}
+
+.login-button_reg {
+    background: #00aeef;
+    border-radius: 10px;
+    border: none;
+    color: #25262a;
+    display: block;
+    margin: 0 20px;
+    outline: none;
+    padding: 15px 0;
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.login-button_reg:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.enter_authorization{
+    text-align:center;
+}
+
+
+
+/*__________________________________НАЧАЛО ОПИСАНИЯ РЕГИСТРАЦИИ___________________*/
+.pages {
+    border-bottom: 1px dashed BLACK;
+}
+
+.list_page {
+    list-style: none;
+
+    text-align: center;
+    max-width: 1260px;
+
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+
+    height: 50px;
+}
+
+.page_button {
+    border: 1px solid BLACK;
+
+    background-color: white;
+    padding: 15px;
+
+    color: black;
+}
+
+.page_button:hover {
+    background-color: #ffbd88;
+
+}
+
+.page_button_select {
+    border-bottom: 2px solid BLACK;
+
+    padding: 15px;
+}

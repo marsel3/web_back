@@ -1,0 +1,83 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block menu %}
+    <style>
+       #contacts_button {
+        color: white;
+        background-color:#376e6f;
+        border-radius:15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.3);
+    }
+    </style>
+{% endblock %}
+
+
+
+{% block main %}
+<main>
+    <div class="page_contacts">
+    <div class="breadcrumb">
+        <a href="{% url 'home' %}">Главная</a> »
+        <a href="{% url 'contacts' %}">Связаться с нами</a>
+    </div>
+    <h1>Связаться с нами</h1>
+    <form action="{% url 'contacts' %}" method="post" enctype="multipart/form-data">
+        <h2>Наше местонахождение</h2>
+        <div class="box_contact_info">
+            <div class="content">
+                <div class="box_contact_info_left">
+                    <b>Адрес:</b>
+                    <br>do_mon.ru<br>г.Казань, ул. Баки Урманче
+                </div>
+                <div class="box_contact_info_right">
+                    <b>Телефон:</b><br>
+                    +7 (980) 4321-567<br><br>
+                </div>
+            </div>
+        </div>
+        <h2>Написать нам</h2>
+
+        <form class="forma" method="post">
+            {% csrf_token %}
+
+            {% if success %}
+            <script>alert("Ваш запрос был успешно отправлен администрации магазина!");</script>
+            {% endif %}
+
+            {{ form.name.errors }}
+            {{ form.email.errors }}
+            {{ form.message.errors }}
+
+            <div class="content_mail">
+                <div class="content_input w50" data-validate="Обязательное поле">
+                    {{ form.name }}
+
+                    <span class="focus-input-at"></span>
+                </div>
+
+                <div class="content_input w50" data-validate="Обязательное поле">
+                    {{ form.email }}
+                    <span class="focus-input-at"></span>
+                </div>
+
+                <div class="content_input" data-validate="Обязательное поле">
+                    {{ form.message }}
+                    <span class="focus-input-at"></span>
+                </div>
+
+
+                {{ form.file }}
+
+                <div class="send_btn">
+                    <button id="submit-at" class="form-at-btn" onClick="SendForm();">Отправить</button>
+                </div>
+            </div>
+            <div class="result-at"></div>
+        </form>
+
+    </form>
+</div>
+ <br> <br> <br> <br>
+</main>
+{% endblock %}
